@@ -18,8 +18,8 @@ use OpenApi\Annotations as OA;
  *     description="API for Crypto Application with Authentication"
  * )
  * @OA\Server(
- *     url="http://localhost:8000/api",
- *     description="Local Development Server"
+ *     url=L5_SWAGGER_CONST_HOST,
+ *     description="API Server"
  * )
  * @OA\SecurityScheme(
  *     securityScheme="bearerAuth",
