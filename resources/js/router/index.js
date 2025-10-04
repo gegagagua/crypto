@@ -60,14 +60,42 @@ const router = new VueRouter({
 });
 
 // Navigation guards
-router.beforeEach((to, from, next) => {
-    const isAuthenticated = store.getters.isAuthenticated;
+router.beforeEach(async (to, from, next) => {
+    const isAuthenticated = store.getters['auth/isAuthenticated'];
+    const user = store.getters['auth/user'];
+    const token = localStorage.getItem('auth_token');
     
-    if (to.meta.requiresAuth && !isAuthenticated) {
+    console.log('🔐 Navigation guard:', {
+        to: to.path,
+        from: from.path,
+        isAuthenticated,
+        hasUser: !!user,
+        hasToken: !!token,
+        requiresAuth: to.meta.requiresAuth,
+        requiresGuest: to.meta.requiresGuest
+    });
+    
+    // If we have a token but no user data, fetch user first
+    if (token && !user && to.meta.requiresAuth) {
+        console.log('📡 Token exists but no user data, fetching...');
+        try {
+            await store.dispatch('auth/fetchUser');
+            console.log('✅ User data fetched successfully');
+        } catch (error) {
+            console.error('❌ Failed to fetch user');
+        }
+    }
+    
+    const finalIsAuthenticated = store.getters['auth/isAuthenticated'];
+    
+    if (to.meta.requiresAuth && !finalIsAuthenticated) {
+        console.log('❌ Not authenticated, redirecting to login');
         next('/login');
-    } else if (to.meta.requiresGuest && isAuthenticated) {
+    } else if (to.meta.requiresGuest && finalIsAuthenticated) {
+        console.log('✅ Already authenticated, redirecting to dashboard');
         next('/dashboard');
     } else {
+        console.log('✅ Navigation allowed');
         next();
     }
 });

@@ -56,8 +56,8 @@
     <div class="container mt-5">
       <div class="row justify-content-center">
         <div class="crypt-login-form mt-5">
-          <div class="d-flex justify-content-between mb-4 text-center">
-            <h3 class="fw-bold">Log in</h3>
+                <div class="d-flex justify-content-between mb-4 text-center">
+                    <h3 class="fw-bold">Log in 🔥</h3>
             <div class="dropup">
               <div class="dropdown-menu dropdown-menu-lg-end text-center card-bs" style="max-width: 390px;">
                 <div class="d-flex flex-column justify-content-center text-sm px-3 mt-2">
@@ -155,6 +155,18 @@
         </div>
       </div>
     </footer>
+
+    <!-- Toast Container -->
+    <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 9999;">
+      <div ref="errorToast" class="toast align-items-center text-bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+          <div class="toast-body">
+            {{ errorMessage }}
+          </div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -172,7 +184,8 @@ export default {
       },
       loading: false,
       showPassword: false,
-      errors: {}
+      errors: {},
+      errorMessage: ''
     };
   },
   methods: {
@@ -182,22 +195,52 @@ export default {
       this.showPassword = !this.showPassword;
     },
     
+    showErrorToast(message) {
+      console.log('🍞 Showing toast:', message);
+      this.errorMessage = message;
+      
+      this.$nextTick(() => {
+        const toastElement = this.$refs.errorToast;
+        
+        if (!toastElement) {
+          console.error('❌ Toast element not found!');
+          return;
+        }
+        
+        if (!window.bootstrap || !window.bootstrap.Toast) {
+          console.error('❌ Bootstrap Toast not available!');
+          return;
+        }
+        
+        const toast = new window.bootstrap.Toast(toastElement, {
+          autohide: true,
+          delay: 5000
+        });
+        
+        toast.show();
+        console.log('✅ Toast shown successfully');
+      });
+    },
+    
     async handleLogin() {
       this.loading = true;
       this.errors = {};
 
-      try {
-        const result = await this.login(this.form);
+      const result = await this.login(this.form);
+      
+      if (result.success) {
+        console.log('✅ Login successful! Redirecting to dashboard...');
+        // Redirect to dashboard on success
+        this.$router.push('/dashboard');
+      } else {
+        // Show error toast
+        const errorMsg = result.error || 'არასწორი ელ.ფოსტა ან პაროლი';
+        this.showErrorToast(errorMsg);
         
-        if (result.success) {
-          this.$router.push('/dashboard');
-        } else {
-          if (result.errors) {
-            this.errors = result.errors;
-          }
+        // Set field-specific errors if available
+        if (result.errors) {
+          this.errors = result.errors;
         }
-      } catch (error) {
-        console.error('Login error:', error);
       }
       
       this.loading = false;
@@ -205,28 +248,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-/* The styles are now handled by the global CSS files */
-.crypt-login-form {
-  max-width: 400px;
-  width: 100%;
-}
-
-.eye {
-  cursor: pointer;
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-}
-
-.input-group-append {
-  position: relative;
-}
-
-.fright {
-  float: right;
-}
-</style>

@@ -334,21 +334,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-/* The styles are now handled by the global CSS files */
-.crypt-login-form {
-  max-width: 500px;
-  width: 100%;
-}
-
-#passstrength {
-  font-size: 0.875rem;
-  font-weight: 500;
-  margin-top: 0.25rem;
-}
-
-.text-sm {
-  font-size: 0.875rem;
-}
-</style>
