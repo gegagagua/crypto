@@ -148,10 +148,10 @@
             </div>
 
             <!-- Devices and IP Table -->
-            <div class="trusted-devices-section">
-              <h6 class="text-light fs-6 fw-bold">Trusted Devices and IP Addresses</h6>
-              <div class="table-responsive card-border">
-                <table class="table table-dark table-hover card-bs mb-0">
+           <div class="trusted-devices-section">
+  <h6 class="text-light fs-6 fw-bold">Trusted Devices and IP Addresses</h6>
+  <div class="table-responsive card-border">
+    <table class="table table-dark table-hover card-bs mb-0">
                   <thead>
                     <tr class="table-active mb-0">
                       <th scope="col" class="underline">Trusted Device</th>
@@ -379,39 +379,35 @@ export default {
 /* Fix for text alignment under each other */
 .d-sm-flex.gap-3 .flex {
   display: flex;
-  flex-direction: column;
-  /* stack items vertically */
+  flex-direction: column; /* stack items vertically */
   justify-content: center;
 }
 
 .d-sm-flex.gap-3 .flex h6 {
-  margin-bottom: 4px;
-  /* space between heading and description */
+  margin-bottom: 4px; /* space between heading and description */
 }
 
 .d-sm-flex.gap-3 .flex p {
-  margin: 0;
-  /* remove default large spacing */
+  margin: 0; /* remove default large spacing */
   line-height: 1.4;
 }
 
 /* Force "Trusted Devices and IP Addresses" heading and table to stack */
 .trusted-devices-section {
   display: flex;
-  flex-direction: column;
-  /* stack heading and table */
-  gap: 0.75rem;
-  /* space between heading and table */
+  flex-direction: column; /* stack heading and table */
+  gap: 0.75rem;           /* space between heading and table */
 }
 
 /* Heading style stays as-is */
 .trusted-devices-section h6 {
-  margin-bottom: 0;
-  /* no extra spacing so gap controls it */
+  margin-bottom: 0; /* no extra spacing so gap controls it */
 }
 
 /* Table box gets its own spacing */
 .trusted-devices-section .table-responsive {
-  margin-top: 0;
+  margin-top: 0; 
 }
+
+
 </style>
