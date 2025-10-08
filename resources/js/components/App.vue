@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" data-scroll-container>
     <!-- Authentication Pages (Login/Register) -->
     <div v-if="isAuthPage" class="auth-layout">
       <router-view />

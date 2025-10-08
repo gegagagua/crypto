@@ -11,11 +11,14 @@
       <!-- Offcanvas (mobile) -->
       <OffcanvasNav />
 
+
       <!-- Page content -->
       <div class="wrapper p-3">
+      
         <h2 class="text-light fw-bold mb-3">Account Settings</h2>
 
         <!-- Settings -->
+    
         <div class="d-flex flex-column pb-4">
           <!-- Two-Factor Authentication (2FA) -->
           <div class="card-bs p-3 p-sm-4 mt-2">
@@ -320,13 +323,8 @@
       </div>
     </div>
 
-    <!-- Modals (mounted once globally is fine) -->
-    <DepositModal />
-    <WithdrawModal />
-    <ConvertModal />
+    <!-- Modals -->
     <ChangeEmailModal />
-    <CurrencyModal />
-
     <ChangePhoneModal />
     <ChangePasswordModal />
     <DisableAccountModal />
@@ -339,12 +337,7 @@ import Navbar from "./layouts/navbar.vue";
 import HeaderBar from "./layouts/HeaderBar.vue";
 import OffcanvasNav from "./layouts/OffcanvasNav.vue";
 
-import DepositModal from "./modals/DepositModal.vue";
-import WithdrawModal from "./modals/WithdrawModal.vue";
-import ConvertModal from "./modals/ConvertModal.vue";
 import ChangeEmailModal from "./modals/ChangeEmailModal.vue";
-import CurrencyModal from "./modals/CurrencyModal.vue";
-
 import ChangePhoneModal from "./modals/ChangePhoneModal.vue";
 import ChangePasswordModal from "./modals/ChangePasswordModal.vue";
 import DisableAccountModal from "./modals/DisableAccountModal.vue";
@@ -356,11 +349,7 @@ export default {
     Navbar,
     HeaderBar,
     OffcanvasNav,
-    DepositModal,
-    WithdrawModal,
-    ConvertModal,
     ChangeEmailModal,
-    CurrencyModal,
     ChangePhoneModal,
     ChangePasswordModal,
     DisableAccountModal,
@@ -369,7 +358,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .row .flex {
   display: flex;
   flex-direction: column;
