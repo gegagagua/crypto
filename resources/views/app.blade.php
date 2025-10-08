@@ -26,6 +26,16 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg" href="{{ asset('images/favicon.svg') }}">
     
+    <!-- AmCharts (Load before Vue app) -->
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    
+    <!-- ApexCharts (Load before Vue app) -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.45.1/dist/apexcharts.min.js"></script>
+    
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="crypt-dark">
@@ -43,14 +53,6 @@
     
     <!-- wNumb (Number formatting) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.2.0/wNumb.min.js"></script>
-    
-    <!-- ApexCharts (Charts library) -->
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.45.1/dist/apexcharts.min.js"></script>
-    
-    <!-- AmCharts (Advanced charts) -->
-    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
     
     <!-- Custom JS -->
     <script src="{{ asset('js/main.js') }}"></script>

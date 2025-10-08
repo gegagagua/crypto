@@ -153,7 +153,7 @@
             <!-- Devices and IP Table -->
            <div class="trusted-devices-section">
   <h6 class="text-light fs-6 fw-bold">Trusted Devices and IP Addresses</h6>
-  <div class="table-responsive card-border">
+  <div class="table-respongit pullsive card-border">
     <table class="table table-dark table-hover card-bs mb-0">
                   <thead>
                     <tr class="table-active mb-0">
