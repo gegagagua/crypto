@@ -112,7 +112,7 @@ const actions = {
         try {
             console.log('📡 Fetching user data from /auth/me...');
             const response = await axios.get('/auth/me');
-            console.log('✅ User data received:', response.data.data.user);
+            console.log('✅ User data received from back:', response.data.data.user);
             commit('SET_USER', response.data.data.user);
             return { success: true };
         } catch (error) {
