@@ -1,10 +1,10 @@
 <template>
-  <div class="page d-flex">
+   <section class="container-fluid d-sm-flex flex-row fixed-sidebar">
     <!-- Sidebar -->
     <Navbar />
 
     <!-- Main Area -->
-    <div class="flex-fill d-flex flex-column">
+    <div class="wrapper pb-4">
       <!-- Header -->
       <HeaderBar />
 
@@ -12,7 +12,7 @@
       <OffcanvasNav />
 
       <!-- Page Wrapper -->
-      <div class="wrapper p-4">
+      <!-- <div class="row g-2 animation-element in-view"> -->
         <!-- Overview + Total Assets + Deposit/P2P -->
         <OverviewSection />
 
@@ -21,7 +21,7 @@
 
         <!-- Market table + News + Ticker -->
         <MarketAndNews />
-      </div>
+      <!-- </div> -->
     </div>
 
     <!-- ✅ Global Modals -->
@@ -30,7 +30,7 @@
     <ConvertModal />
     <ChangeEmailModal />
     <CurrencyModal />
-  </div>
+  </section>
 </template>
 
 <script>

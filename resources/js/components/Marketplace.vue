@@ -1,12 +1,12 @@
 <template>
-  <div class="page d-flex">
+  <section class="container-fluid d-sm-flex flex-row fixed-sidebar">
     <!-- Sidebar -->
     <Navbar />
 
     <!-- Main -->
-    <div class="flex-fill d-flex flex-column">
+    <div class="wrapper pb-4">
       <HeaderBar />
-      <div class="wrapper p-3 p-sm-4">
+      <div class="d-flex flex-column card-bs">
 
         <!-- Title -->
         <div class="card-bs p-3 p-sm-4 mb-3">
@@ -239,7 +239,7 @@
     <ConvertModal />
     <ChangeEmailModal />
     <CurrencyModal />
-  </div>
+  </section>
 </template>
 
 <script>
@@ -329,32 +329,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.wrapper { width: 100%; }
-
-/* mini grid */
-.mini-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: .75rem;
-}
-.table-wrap { background: transparent; }
-
-/* big table max height */
-.big-table { max-height: 420px; overflow-y: auto; }
-
-/* tighten tables a bit */
-.table th, .table td { vertical-align: middle; }
-
-/* responsive */
-@media (max-width: 1200px) {
-  .mini-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-@media (max-width: 576px) {
-  .mini-grid { grid-template-columns: 1fr; }
-  .card-bs { padding: .75rem !important; }
-  .table thead th { white-space: nowrap; }
-  .table { font-size: .92rem; }
-}
-</style>

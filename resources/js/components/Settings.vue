@@ -1,12 +1,12 @@
 <template>
-  <div class="page d-flex">
+  <section class="container-fluid d-sm-flex flex-row fixed-sidebar">
     <Navbar />
 
-    <div class="flex-fill d-flex flex-column">
+    <div class="wrapper">
       <HeaderBar />
       <OffcanvasNav />
 
-      <div class="p-4">
+
         <div class="card-bs p-4 mb-3">
           <h4 class="crypt-grayscale-100 fw-bold mb-2">Security Settings</h4>
           <p class="crypt-grayscale-300 mb-0">
@@ -194,7 +194,7 @@
 
           </div>
         </div>
-      </div>
+ 
     </div>
 
     <!-- Modals present on this page -->
@@ -203,7 +203,7 @@
     <ChangeLanguageModal @save="saveLanguage" />
     <!-- IMPORTANT: include Deposit modal so HeaderBar's "Add Funds" works -->
     <DepositModal />
-  </div>
+  </section>
 </template>
 
 <script>
@@ -256,13 +256,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.animation-element{opacity:1!important;transform:none!important;visibility:visible!important;}
-.settings-card .d-flex.gap-3.text-primary{align-items:flex-start!important;}
-.settings-card .flex{display:block!important;flex:none!important;}
-.settings-card .flex>.d-flex{display:block!important;margin:0!important;}
-.settings-card .flex>h6,
-.settings-card .flex>.d-flex>h6{display:block;margin:0 0 6px!important;line-height:1.25;}
-.settings-card .flex>p{display:block;margin:0!important;line-height:1.45;}
-</style>

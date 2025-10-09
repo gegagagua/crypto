@@ -1,10 +1,10 @@
 <template>
-  <div class="page d-flex">
+   <section class="container-fluid d-sm-flex flex-row fixed-sidebar">
     <!-- Sidebar -->
     <Navbar />
 
     <!-- Main content -->
-    <div class="flex-fill d-flex flex-column">
+    <div class="wrapper pb-4">
       <HeaderBar />
       <OffcanvasNav />
 
@@ -18,7 +18,7 @@
     <ConvertModal />
     <ChangeEmailModal />
     <CurrencyModal />
-  </div>
+   </section>
 </template>
 
 <script>

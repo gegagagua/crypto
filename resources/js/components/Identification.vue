@@ -1,16 +1,16 @@
 <template>
-  <div class="page d-flex">
+   <section class="container-fluid d-sm-flex flex-row fixed-sidebar">
     <!-- Sidebar -->
     <Navbar />
 
     <!-- Main content -->
-    <div class="flex-fill d-flex flex-column">
+    <div class="wrapper">
       <!-- Header -->
       <HeaderBar />
       <OffcanvasNav />
 
       <!-- Page Content -->
-      <div class="p-4">
+      <!-- <div class="p-4"> -->
         <div class="row mt-2 animation-element">
           <!-- Left Section -->
           <div class="col-md-8 mb-4">
@@ -22,7 +22,7 @@
             <FAQ />
           </div>
         </div>
-      </div>
+      <!-- </div> -->
     </div>
 
     <!-- Global Modals -->
@@ -31,7 +31,7 @@
     <ConvertModal />
     <ChangeEmailModal />
     <CurrencyModal />
-  </div>
+  </section>
 </template>
 
 <script>

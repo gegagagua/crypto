@@ -36,7 +36,7 @@
     <!-- ApexCharts (Load before Vue app) -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.45.1/dist/apexcharts.min.js"></script>
     
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/js/app.js'])
 </head>
 <body class="crypt-dark">
     <div id="app"></div>
