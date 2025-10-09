@@ -1,5 +1,5 @@
 <template>
-  <div class="p-4">
+  <div class="wrapper pb-4">
     <!-- Header -->
     <div class="card-bs p-4 mb-3">
       <h4 class="crypt-grayscale-100 fw-bold mb-2">Order History</h4>
