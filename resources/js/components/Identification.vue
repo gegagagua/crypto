@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import Navbar from './layouts/Navbar.vue'
+import Navbar from './layouts/navbar.vue'
 import HeaderBar from './layouts/HeaderBar.vue'
 import OffcanvasNav from './layouts/OffcanvasNav.vue'
 import VerifiedAccount from './layouts/VerifiedAccount.vue'
@@ -126,7 +126,7 @@ export default {
 </template>
 
 <script>
-import Navbar from './layouts/Navbar.vue'
+import Navbar from './layouts/navbar.vue'
 import HeaderBar from './layouts/HeaderBar.vue'
 import OffcanvasNav from './layouts/OffcanvasNav.vue'
 import UnverifiedAccount from './layouts/UnverifiedAccount.vue'

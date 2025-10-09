@@ -5307,13 +5307,13 @@
 </template>
 
 <script>
-import Navbar from '../components/layouts/Navbar.vue'
-import HeaderBar from '../components/layouts/HeaderBar.vue'
-import DepositModal from '../components/modals/DepositModal.vue'
-import WithdrawModal from '../components/modals/WithdrawModal.vue'
-import ConvertModal from '../components/modals/ConvertModal.vue'
-import ChangeEmailModal from '../components/modals/ChangeEmailModal.vue'
-import CurrencyModal from '../components/modals/CurrencyModal.vue'
+import Navbar from './layouts/navbar.vue'
+import HeaderBar from './layouts/HeaderBar.vue'
+import DepositModal from './modals/DepositModal.vue'
+import WithdrawModal from './modals/WithdrawModal.vue'
+import ConvertModal from './modals/ConvertModal.vue'
+import ChangeEmailModal from './modals/ChangeEmailModal.vue'
+import CurrencyModal from './modals/CurrencyModal.vue'
 
 export default {
   name: 'MarketsOverview',

@@ -44,22 +44,22 @@
 
 <script>
 // Layout Components
-import Navbar from "../components/layouts/Navbar.vue";
-import HeaderBar from "../components/layouts/HeaderBar.vue";
-import OffcanvasNav from "../components/layouts/OffcanvasNav.vue";
+import Navbar from "./layouts/navbar.vue";
+import HeaderBar from "./layouts/HeaderBar.vue";
+import OffcanvasNav from "./layouts/OffcanvasNav.vue";
 
 // Exchange Components
-import ViewChart from "../components/layouts/ViewChart.vue";
-import TradeTabs from "../components/layouts/TradeTabs.vue";
-import MarketTabs from "../components/layouts/MarketTabs.vue";
-import TransactionController from "../components/layouts/TransactionController.vue";
+import ViewChart from "./layouts/ViewChart.vue";
+import TradeTabs from "./layouts/TradeTabs.vue";
+import MarketTabs from "./layouts/MarketTabs.vue";
+import TransactionController from "./layouts/TransactionController.vue";
 
 // Modals
-import DepositModal from "../components/modals/DepositModal.vue";
-import WithdrawModal from "../components/modals/WithdrawModal.vue";
-import ConvertModal from "../components/modals/ConvertModal.vue";
-import ChangeEmailModal from "../components/modals/ChangeEmailModal.vue";
-import CurrencyModal from "../components/modals/CurrencyModal.vue";
+import DepositModal from "./modals/DepositModal.vue";
+import WithdrawModal from "./modals/WithdrawModal.vue";
+import ConvertModal from "./modals/ConvertModal.vue";
+import ChangeEmailModal from "./modals/ChangeEmailModal.vue";
+import CurrencyModal from "./modals/CurrencyModal.vue";
 
 export default {
   name: "Exchange",

@@ -35,21 +35,21 @@
 
 <script>
 /* Global layout */
-import Navbar from "../components/layouts/Navbar.vue";
-import HeaderBar from "../components/layouts/HeaderBar.vue";
-import OffcanvasNav from "../components/layouts/OffcanvasNav.vue";
+import Navbar from "./layouts/navbar.vue";
+import HeaderBar from "./layouts/HeaderBar.vue";
+import OffcanvasNav from "./layouts/OffcanvasNav.vue";
 
 /* Dashboard sections */
-import OverviewSection from "../components/layouts/dashboard/OverviewSection.vue";
-import AccountSummary from "../components/layouts/dashboard/AccountSummary.vue";
-import MarketAndNews from "../components/layouts/dashboard/MarketAndNews.vue";
+import OverviewSection from "./layouts/dashboard/OverviewSection.vue";
+import AccountSummary from "./layouts/dashboard/AccountSummary.vue";
+import MarketAndNews from "./layouts/dashboard/MarketAndNews.vue";
 
 /* Modals (global) */
-import DepositModal from "../components/modals/DepositModal.vue";
-import WithdrawModal from "../components/modals/WithdrawModal.vue";
-import ConvertModal from "../components/modals/ConvertModal.vue";
-import ChangeEmailModal from "../components/modals/ChangeEmailModal.vue";
-import CurrencyModal from "../components/modals/CurrencyModal.vue";
+import DepositModal from "./modals/DepositModal.vue";
+import WithdrawModal from "./modals/WithdrawModal.vue";
+import ConvertModal from "./modals/ConvertModal.vue";
+import ChangeEmailModal from "./modals/ChangeEmailModal.vue";
+import CurrencyModal from "./modals/CurrencyModal.vue";
 
 export default {
   name: "Dashboard",

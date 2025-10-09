@@ -207,7 +207,7 @@
 </template>
 
 <script>
-import Navbar from './layouts/Navbar.vue'
+import Navbar from './layouts/navbar.vue'
 import HeaderBar from './layouts/HeaderBar.vue'
 import OffcanvasNav from './layouts/OffcanvasNav.vue'
 
