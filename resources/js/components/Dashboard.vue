@@ -114,9 +114,9 @@ export default {
 
 /* --- Modal clickability & stacking --- */
 
-/* Ensure Bootstrap modals sit above headers/sidebars/backdrops */
-.modal { z-index: 1065; }
-.modal-backdrop { z-index: 1060; }
+/* Ensure Bootstrap modals sit above headers/sidebars/backdrops and reaction canvas */
+.modal { z-index: 1000000 !important; }
+.modal-backdrop { z-index: 999999 !important; }
 
 /* If your header/sidebar is fixed with high z-index, put it below the modal while open */
 body.modal-open .header,
