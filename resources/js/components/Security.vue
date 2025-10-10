@@ -44,7 +44,7 @@
                                     <path d="M6.75 9L8.25 10.5L11.25 7.5" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                                 </svg>
                                 jh**@**.com
-                                <a href="#!" class="btn btn-editor btn-dark text-sm ms-2" data-bs-toggle="modal" data-bs-target="#manageEmail2fa">Manage</a>
+                                <a href="#!" class="btn btn-editor btn-dark text-sm ms-2" data-bs-toggle="modal" data-bs-target="#ChangeEmailModal">Manage</a>
                             </div>
                         </div>
                     </div>
@@ -73,7 +73,7 @@
                                     <path d="M512 42.656c259.2 0 469.344 210.112 469.344 469.344S771.2 981.344 512 981.344 42.656 771.2 42.656 512 252.768 42.656 512 42.656zm0 640a53.344 53.344 0 100 106.656 53.344 53.344 0 000-106.656zm0-469.312c-23.552 0-42.656 19.104-42.656 42.656v341.344a42.656 42.656 0 0085.312 0V256c0-23.552-19.104-42.656-42.656-42.656z"></path>
                                 </svg>
                                 Not Enabled
-<a href="#!" class="btn btn-editor btn-dark text-sm ms-2" data-bs-toggle="modal" data-bs-target="#linkPhone2fa">Link</a>
+<a href="#!" class="btn btn-editor btn-dark text-sm ms-2" data-bs-toggle="modal" data-bs-target="#ChangePhoneModal">Link</a>
                             </div>
                         </div>
                     </div>
@@ -98,7 +98,7 @@
                         </div>
                         <div class="col-12 col-md-6">
                             <div class="d-flex justify-content-sm-end align-items-center gap-2 text-warning text-sm">
-<a href="#!" class="btn btn-editor btn-dark text-sm ms-2" data-bs-toggle="modal" data-bs-target="#managePasswordModal">Manage</a>
+<a href="#!" class="btn btn-editor btn-dark text-sm ms-2" data-bs-toggle="modal" data-bs-target="#ChangePasswordModal">Manage</a>
                             </div>
                         </div>
                     </div>
@@ -222,7 +222,7 @@
                         </div>
                         <div class="col-12 col-md-6">
                             <div class="d-flex justify-content-sm-end align-items-center gap-2 text-primary text-sm">
-                                <a href="#!" class="btn btn-editor btn-dark text-sm ms-2" role="button">Disable</a>
+                                <a href="#!" class="btn btn-editor btn-dark text-sm ms-2" role="button" data-bs-toggle="modal" data-bs-target="#DisableAccountModal">Disable</a>
                             </div>
                         </div>
                     </div>
@@ -247,7 +247,7 @@
                         </div>
                         <div class="col-12 col-md-6">
                             <div class="d-flex justify-content-sm-end align-items-center gap-2 text-primary text-sm">
-                                <a class="btn btn-editor btn-danger text-sm ms-2" href="#!" data-bs-toggle="modal" data-bs-target="#DeleteAccount">Delete</a>
+                                <a class="btn btn-editor btn-danger text-sm ms-2" href="#!" data-bs-toggle="modal" data-bs-target="#DeleteAccountModal">Delete</a>
                             </div>
                         </div>
                     </div>
